@@ -1,9 +1,8 @@
-
 import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 import { SYSTEM_PROMPT } from "../constants";
 
 const getAIClient = () => {
-  // Accès direct à la clé API injectée par Vite lors du build
+  // process.env.API_KEY est remplacé par Vite lors du build
   const apiKey = process.env.API_KEY || '';
   return new GoogleGenAI({ apiKey });
 };
