@@ -1,9 +1,6 @@
-
-[build]
-  publish = "dist"
+publish = "dist"
   command = "npm run build"
-
-[[redirects]]
+  NPM_FLAGS = "--legacy-peer-deps"]
   from = "/*"
   to = "/index.html"
   status = 200
