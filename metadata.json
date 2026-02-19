@@ -1,0 +1,5 @@
+{
+  "name": "Assistant Médical Intelligent",
+  "description": "Une application web de triage médical utilisant l'IA Gemini pour évaluer le niveau d'urgence des symptômes et orienter les patients.",
+  "requestFramePermissions": []
+}
