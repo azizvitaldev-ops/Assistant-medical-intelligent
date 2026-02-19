@@ -3,9 +3,9 @@ import { GoogleGenAI, Chat, GenerateContentResponse } from "@google/genai";
 import { SYSTEM_PROMPT } from "../constants";
 
 const getAIClient = () => {
-  // Accès sécurisé à la clé API injectée par l'environnement
-  const apiKey = typeof process !== 'undefined' ? process.env.API_KEY : '';
-  return new GoogleGenAI({ apiKey: apiKey || '' });
+  // Accès direct à la clé API injectée par Vite lors du build
+  const apiKey = process.env.API_KEY || '';
+  return new GoogleGenAI({ apiKey });
 };
 
 export const createMedicalChat = (): Chat => {
