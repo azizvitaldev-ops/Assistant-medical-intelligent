@@ -1,6 +1,10 @@
-publish = "dist"
+netlify.toml :
+
+[build]
+  publish = "dist"
   command = "npm run build"
-  NPM_FLAGS = "--legacy-peer-deps"]
+
+[[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
