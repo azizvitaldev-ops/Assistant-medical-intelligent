@@ -2,7 +2,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Stethoscope, History, Info, MessageSquare } from 'lucide-react';
-import { APP_NAME } from '../constants';
 
 const Navbar: React.FC = () => {
   const location = useLocation();
@@ -19,11 +18,18 @@ const Navbar: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <div className="bg-blue-600 p-2 rounded-lg text-white">
+            <Link to="/" className="flex items-center space-x-2 group">
+              <div className="bg-blue-600 p-2 rounded-xl text-white shadow-sm group-hover:bg-blue-700 transition-colors">
                 <Stethoscope size={24} />
               </div>
-              <span className="text-xl font-bold text-slate-800 hidden sm:block">{APP_NAME}</span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-slate-900 leading-none tracking-tight">
+                  Assistant<span className="text-blue-600">Médical</span>
+                </span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest leading-none mt-1">
+                  Intelligent
+                </span>
+              </div>
             </Link>
           </div>
           <div className="flex items-center space-x-1 sm:space-x-4">
